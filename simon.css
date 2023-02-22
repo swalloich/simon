@@ -1,7 +1,25 @@
+html
+{
+    --nav-color: #3950FA;
+    --nav-highlight-color: #2970E3;
+}
+
 body
 {
     display: flex;
     flex-direction: column;
+}
+
+header
+{
+    background-color: var(--nav-color);
+    display: flex;
+}
+
+header ul
+{
+    margin: 0px;
+    padding: 0px;
 }
 
 main
@@ -28,6 +46,8 @@ main
     min-height: 400px;
     max-width: min(80vmin, 1000px);
     max-height: min(80vmin, 1000px);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .controls
