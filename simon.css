@@ -14,12 +14,68 @@ header
 {
     background-color: var(--nav-color);
     display: flex;
+    justify-content: center;
+}
+
+header .header-inner-container
+{
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
 }
 
 header ul
 {
+    display: flex;
     margin: 0px;
     padding: 0px;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+header ul li
+{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+@media only screen and (min-width: 1500px)
+{
+    header ul
+    {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 1500px)
+{
+    header ul
+    {
+        width: 30%;
+    }
+}
+
+header ul a
+{
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+header ul a, header ul a:visited
+{
+    color: white;
+    text-decoration: none;
+}
+
+header ul li:hover
+{
+    background-color: var(--nav-highlight-color);
 }
 
 main
