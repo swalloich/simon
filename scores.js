@@ -4,4 +4,9 @@ class Scores
     {
         return false;
     }
+
+    static writeScore(uname, score)
+    {
+        
+    }
 }

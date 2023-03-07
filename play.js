@@ -33,12 +33,20 @@ class ColorSequence
     }
 }
 
-let simonSequence = new ColorSequence();
-let clickedSequence = [];
-let clicked = 0;
+let simonSequence = null;
+let clickedSequence = null;
+let clicked = null;
+let score = null;
 
 function initiateSimon()
 {
+    simonSequence = new ColorSequence();
+    clickedSequence = [];
+    clicked = 0;
+    score = 0;
+
+    document.getElementById('score').value = score;
+
     simonSequence.addRandomColor();
     playSequence();
 }
@@ -201,8 +209,7 @@ function sequenceAdd(btn)
         {
             simonSequence.addRandomColor();
             playSequence();
-            console.log("added new color:");
-            console.log(simonSequence.getSequence());
+            score++;
         }
         else
         {
@@ -211,6 +218,7 @@ function sequenceAdd(btn)
             // clear sequences
         }
 
+        document.getElementById('score').value = score;
         clickedSequence = [];
         clicked = 0;
         console.log("reset clicked");

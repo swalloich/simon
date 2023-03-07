@@ -2,21 +2,38 @@ class Login
 {
     static login(uname)
     {
-        console.log("The username provided was " + uname);
+        if (document.cookie != '')
+        {
+            return this.#existingUser(uname);
+        }
+        else
+        {
+            this.#createUser(uname);
+        }
     }
 
-    #createLogin()
+    #getCookies()
     {
-        return false;
+        return document.cookie.split(';');
     }
 
-    #checkLogin()
+    #createUser(uname)
     {
-        return false;
+        document.cookie = `uname=${uname}`;
     }
 
-    #loginExists(login)
+    #existingUser()
     {
-        return false;
+        let cookies = this.#getCookies();
+        let unameCookie = null;
+        for (let i = 0; i < cookies.length; i++)
+        {
+            if (cookies[i].includes("uname"))
+            {
+                unameCookie = cookies[i].split('=');
+            }
+        }
+
+        return unameCookie[1];
     }
 }
