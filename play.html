@@ -23,10 +23,10 @@
         <main>
             <div id="player_name">Player: Mystery player</div>
             <div class="simon-container">
-                <button class="button-top-left" id="simon-tl"></button>
-                <button class="button-top-right" id="simon-tr"></button>
-                <button class="button-bottom-left" id="simon-bl"></button>
-                <button class="button-bottom-right" id="simon-br"></button>
+                <button class="button-top-left" id="simon-tl" onclick="sequenceAdd(0)"></button>
+                <button class="button-top-right" id="simon-tr" onclick="sequenceAdd(1)"></button>
+                <button class="button-bottom-left" id="simon-bl" onclick="sequenceAdd(2)"></button>
+                <button class="button-bottom-right" id="simon-br" onclick="sequenceAdd(3)"></button>
                 <div class="controls center">
                     <label for="score">Score</label>
                     <input type="text" id="score" name="score" value="--" disabled>
