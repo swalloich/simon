@@ -64,12 +64,22 @@ class Login
     }
 }
 
-function onLoginLoad()
-{
-    
-}
-
 function loginButton()
 {
     Login.login();
+}
+
+function getUser()
+{
+    let cookies = document.cookie.split(';');
+    let unameCookie = null;
+    for (let i = 0; i < cookies.length; i++)
+    {
+        if (cookies[i].includes("uname"))
+        {
+            unameCookie = cookies[i].split('=');
+        }
+    }
+    
+    document.getElementById('player_name').innerHTML = unameCookie[1];
 }
